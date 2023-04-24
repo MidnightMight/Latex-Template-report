@@ -1,0 +1,108 @@
+\documentclass[english]{report}
+\usepackage[a4paper,margin = 1in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./Image/} }
+\usepackage{subcaption} % captions of subplot
+\usepackage{appendix} %appendix module
+\usepackage{amsmath} % math embed
+\usepackage{pdfpages} % for importing pdf
+\usepackage{fancyhdr} % header 
+\usepackage{verbatim} % importing code lines 
+\usepackage{color} % adding fancy colours
+
+\usepackage{babel}
+\usepackage[useregional,showdow]{datetime2}
+\usepackage{csquotes}
+
+\usepackage{ragged2e} % used for mostly table
+\usepackage{dirtytalk}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{wrapfig}
+
+\usepackage[backend=biber, style = ieee]{biblatex} %bibilography latex
+\addbibresource{main.bib}
+\usepackage[normalem]{ulem} % Line for title page
+\useunder{\uline}{\ul}{}
+
+\DTMlangsetup[en-GB]{abbr}
+%define things in header and title page
+\def\myname{Methawat Vongphakdi} % Name
+\def\mySTD{n11321393} % student number
+\def\subjectCode{EGB242} % subject code
+\def\subjectName{Signal Analysis} % subject name
+\def\AssignmentNum{Assignment 1} % what u wanna call your assignment can be Study Note 1 or other
+\def\taskName{Problem Solving Task 1} % The assignment full name
+
+% Header style
+\pagestyle{fancy}
+\lhead{\subjectCode: \subjectName - \AssignmentNum }
+\rhead{\myname, \mySTD }
+
+\sloppy
+\definecolor{lightgray}{gray}{0.5}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\DTMlangsetup[en-GB]{ord=raise,monthyearsep={,\space}}
+
+\lstset{style=mystyle}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\title{ Queensland University of Technology, \subjectCode \\ \HRule{1 pt} \\ \AssignmentNum : \\ \taskName.
+\HRule{2.0pt} \\ [0.6cm]}
+\author{\textbf{\myname} \\ \\ \mySTD }
+\date{\today} % change time zone -- > https://www.php.net/manual/en/timezones.php
+
+
+\begin{document}
+\maketitle
+\pagestyle{fancy}
+\tableofcontents % can be commented out for exclusion
+\newpage
+\section*{Preamble}
+
+\chapter{Beginning} % Main section
+test \cite{australian_government_australian_nodate}
+\section{Introduction} % sub heading
+\subsection{How to intro}
+\paragraph{Very first sentence }
+
+
+\newpage
+\section*{References}
+\printbibliography[heading=none] % use https://zbib.org/
+
+\appendix
+\chapter{Matlab Source Code}
+% \lstinputlisting[language = Octave]{AppendixMatlab/missionA1.m} % <-- example syntax for including source code
+
+\chapter{2nd PDF attached}
+%\includepdf[pages={1-5}]{PDF/Test.pdf} % <-- Including a normal PDF
+
+\end{document}
