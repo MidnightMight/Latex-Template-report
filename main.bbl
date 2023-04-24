@@ -1,0 +1,53 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{australian_government_australian_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ee7a897411dcfd955cfb2699fddc0f3f}{%
+           family={{Australian Government}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Australian Communication}%
+        {Media Authority}%
+      }
+      \strng{namehash}{ee7a897411dcfd955cfb2699fddc0f3f}
+      \strng{fullhash}{ee7a897411dcfd955cfb2699fddc0f3f}
+      \strng{bibnamehash}{ee7a897411dcfd955cfb2699fddc0f3f}
+      \strng{authorbibnamehash}{ee7a897411dcfd955cfb2699fddc0f3f}
+      \strng{authornamehash}{ee7a897411dcfd955cfb2699fddc0f3f}
+      \strng{authorfullhash}{ee7a897411dcfd955cfb2699fddc0f3f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Australian {Radio} {Frequency} {Allocation} {Chart}}
+      \verb{urlraw}
+      \verb https://www.acma.gov.au/sites/default/files/2019-10/Australian%20radiofrequency%20spectrum%20allocations%20chart.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.acma.gov.au/sites/default/files/2019-10/Australian%20radiofrequency%20spectrum%20allocations%20chart.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
