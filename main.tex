@@ -1,4 +1,4 @@
-\documentclass[english]{report}
+\documentclass[english]{book}
 \usepackage[a4paper,margin = 1in]{geometry}
 \usepackage{graphicx} % Required for inserting images
 \graphicspath{ {./Image/} }
@@ -81,20 +81,45 @@
 
 
 \begin{document}
-\maketitle
 \pagestyle{fancy}
+\begin{titlepage}
+    \begin{center}
+        \vspace{1cm}
+        \textbf{Queensland University of Technology, \subjectCode \\ \HRule{1 pt}}
+        \vspace{0.5cm}
+        \huge{\AssignmentNum : \\ \taskName}.
+        \HRule{2.0pt} \\ [0.6cm]
+        \vspace{0.5cm}
+        \textbf{\myname \medspace \mySTDNum }
+        \vfill
+        \raggedright{\normalsize \textbf{ Submitted on: \today \\ \large{Executive Summary}}} 
+        \vspace{1.4mm}
+        \normalsize
+        \\ Loren Ipsum    sjadfndoasjnfoasnfoiasjdiapsjdpisajdiasjdisajdsafkdsnonsadovkjsnavokasnfoasjfiosdjfiosdjfiosajfisdaofjasiodfjsdiaofjsaiofjsadiofjsadiofjasiofnsakovnsacfnoefuojfavjkdsn oinoif asiofjdsoif siadjfojskad jfiasdnf oiwejf iosjfi osadjf ioadsjfio
+        \vfill
+    \end{center}
+\end{titlepage}
+
+\frontmatter
+
 \tableofcontents % can be commented out for exclusion
-\newpage
-\section*{Preamble}
 
-\chapter{Beginning} % Main section
+\listoffigures
+\listoftables
 
-\section{Introduction} % sub heading
+\setcounter{chapter}{1}
+\chapter{Introduction} % Main section
 \subsection{How to intro}
 \paragraph{Very first sentence }
 
+\mainmatter
+\chapter{MainBody}
+
 
 \newpage
+\backmatter
+\chapter*{Conclusion And Fututre reccomendations}
+
 \section*{References}
 \printbibliography[heading=none] % use https://zbib.org/
 
