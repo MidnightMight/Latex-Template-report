@@ -35,9 +35,57 @@
 \def\AssignmentNum{Assignment 1} % what u wanna call your assignment can be Study Note 1 or other
 \def\taskName{Problem Solving Task 1} % The assignment full name
 
+%title page fancy code
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[some]{background}
+\usepackage{lipsum}
+
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+
+\DeclareFixedFont{\bigsf}{T1}{phv}{b}{n}{1.0cm}
+\DeclareFixedFont{\mediumsf}{T1}{phv}{b}{n}{0.6cm}
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor] (-0.5\paperwidth,5) rectangle (0.5\paperwidth,10);  
+\end{tikzpicture}}
+}
+\makeatletter                       
+\def\printauthor{%                  
+    {\large \@author}}              
+\makeatother
+\author{%
+    \myname \\
+    \mySTDNum \\
+    \texttt{n11321393@qut.edu.au}\vspace{40pt}
+    }
+
+
+% Hyperlink for ease of access content page
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    linktoc=all
+}
+
+\usepackage[backend=biber, style = ieee]{biblatex} %bibilography latex
+\addbibresource{main.bib}
+\usepackage[normalem]{ulem} % Line for title page
+\useunder{\uline}{\ul}{}
+\DTMlangsetup[en-GB]{abbr}
+
+
 % Header style
 \pagestyle{fancy}
-\lhead{\subjectCode: \subjectName - \AssignmentNum }
+\lhead{\subjectCode - \AssignmentNum }
 \rhead{\myname, \mySTDNum }
 
 \sloppy
@@ -72,34 +120,50 @@
 
 \setlength{\parindent}{0pt}
 
-\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+%Horizontal line for title page
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 
 
-\title{ Queensland University of Technology, \subjectCode \\ \HRule{1 pt} \\ \AssignmentNum : \\ \taskName.
-\HRule{2.0pt} \\ [0.6cm]}
-\author{\textbf{\myname} \\ \\ \mySTDNum }
-\date{\today} % change time zone -- > https://www.php.net/manual/en/timezones.php
+%command for eliminating empty page
+\let\cleardoublepage=\clearpage 
+
+%\title{ Queensland University of Technology, \subjectCode \\ \HRule{1 pt} \\ \huge{\AssignmentNum : \\ \taskName.}
+%\HRule{2.0pt} \\ [0.6cm]}
+%\author{\textbf{\myname} \\ \\ \mySTDNum }
+%\date{Submitted on: \today} % change time zone -- > https://www.php.net/manual/en/timezones.php
 
 
 \begin{document}
 \pagestyle{fancy}
+\pagenumbering{gobble}
 \begin{titlepage}
-    \begin{center}
-        \vspace{1cm}
-        \textbf{Queensland University of Technology, \subjectCode \\ \HRule{1 pt}}
-        \vspace{0.5cm}
-        \huge{\AssignmentNum : \\ \taskName}.
-        \HRule{2.0pt} \\ [0.6cm]
-        \vspace{0.5cm}
-        \textbf{\myname \medspace \mySTDNum }
-        \vfill
-        \raggedright{\normalsize \textbf{ Submitted on: \today \\ \large{Executive Summary}}} 
-        \vspace{1.4mm}
-        \normalsize
-        \\ Loren Ipsum    sjadfndoasjnfoasnfoiasjdiapsjdpisajdiasjdisajdsafkdsnonsadovkjsnavokasnfoasjfiosdjfiosdjfiosajfisdaofjasiodfjsdiaofjsaiofjsadiofjsadiofjasiofnsakovnsacfnoefuojfavjkdsn oinoif asiofjdsoif siadjfojskad jfiasdnf oiwejf iosjfi osadjf ioadsjfio
-        \vfill
-    \end{center}
+    \BgThispage
+    \newgeometry{left=1cm,right=4cm}
+    \vspace*{2cm}
+    \noindent
+    \textcolor{white}{\bigsf  \subjectCode : \subjectName \\ \\ \mediumsf
+    \AssignmentNum : \\ \\
+     \taskName}
+    \vspace*{2.5cm}\par
+    \noindent
+    \begin{minipage}{0.35\linewidth}
+        \begin{flushright}
+            \printauthor
+        \end{flushright}
+    \end{minipage} \hspace{15pt}
+        %
+    \begin{minipage}{0.02\linewidth}
+        \rule{1pt}{75pt}
+    \end{minipage} \hspace{-5pt}
+        %
+    \begin{minipage}{0.6\linewidth}
+    \vspace{5pt}
+        \textbf{Quotes}\\
+        \lipsum[1]
+    \end{minipage}
 \end{titlepage}
-
+\restoregeometry
+\chapter{Executive summary}
+\lipsum[2-5]
 \frontmatter
 
 \tableofcontents % can be commented out for exclusion
@@ -109,6 +173,10 @@
 
 \setcounter{chapter}{1}
 \chapter{Introduction} % Main section
+\lipsum[1-3]
+\cite*{foster_gibbs_1991} % can add more references via main.bib with zotero bibtex download.
+%to label a figure do \label{fig:namesmth}
+% To reference a figure: \ref*{namesmth}
 \subsection{How to intro}
 \paragraph{Very first sentence }
 
@@ -118,7 +186,7 @@
 
 \newpage
 \backmatter
-\chapter*{Conclusion And Fututre reccomendations}
+\chapter*{Conclusion And Future recommendations}
 
 \section*{References}
 \printbibliography[heading=none] % use https://zbib.org/

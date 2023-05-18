@@ -16,5 +16,56 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{foster_gibbs_1991}{article}{}
+      \name{author}{2}{}{%
+        {{hash=59bce521ee51f5771358d50f6efeca9f}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e65f13039f48d289a859874bc4c0f47a}{%
+           family={Richards},
+           familyi={R\bibinitperiod},
+           given={F.\bibnamedelimi B.},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{85fbad704e036bd332b14be30c72f41b}
+      \strng{fullhash}{85fbad704e036bd332b14be30c72f41b}
+      \strng{bibnamehash}{85fbad704e036bd332b14be30c72f41b}
+      \strng{authorbibnamehash}{85fbad704e036bd332b14be30c72f41b}
+      \strng{authornamehash}{85fbad704e036bd332b14be30c72f41b}
+      \strng{authorfullhash}{85fbad704e036bd332b14be30c72f41b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9890}
+      \field{journaltitle}{The American Mathematical Monthly}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{The {Gibbs} {Phenomenon} for {Piecewise}-{Linear} {Approximation}}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{volume}{98}
+      \field{year}{1991}
+      \field{urldateera}{ce}
+      \field{pages}{47\bibrangedash 49}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1080/00029890.1991.11995703
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/00029890.1991.11995703
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/00029890.1991.11995703
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
